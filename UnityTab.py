@@ -30,6 +30,7 @@ class UnityWidget(QWidget):
 
         runBtn = QPushButton('Run Unity')
         runBtn.setFixedWidth(400)
+        runBtn.clicked.connect(self.run_signal)
 
         launch = QPushButton('Release Notes')
         launch.clicked.connect(self.browse_signal)
@@ -53,4 +54,8 @@ class UnityWidget(QWidget):
 
     def browse_signal(self):
         self.listWidget.browse()
+        return
+
+    def run_signal(self):
+        self.listWidget.run()
         return
