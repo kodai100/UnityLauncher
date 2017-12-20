@@ -4,7 +4,6 @@
 import sys
 import qdarkstyle
 from PyQt5.QtWidgets import *
-from PreferenceTab import *
 from ProjectTab import ProjectWidget
 from UnityTab import UnityWidget
 from PreferenceTab import PreferenceWidget
