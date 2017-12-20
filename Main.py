@@ -47,7 +47,7 @@ class MainWindow(QMainWindow):
         self.setStatusBar(self.status_bar)
         Global.printStatus("Ready", 3000)
 
-        self.setWindowIcon(QIcon("img/icon.png"))
+        # self.setWindowIcon(QIcon("img/icon.png"))
 
         self.setGeometry(0, 0, 700, 600)
         self.put_center()
@@ -66,8 +66,6 @@ if __name__ == '__main__':
 
     app = QApplication(sys.argv)
     app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
-
-    app.setWindowIcon(QIcon("img/icon.png"))
 
     ui = MainWindow()
 
