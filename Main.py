@@ -4,6 +4,7 @@
 import sys
 import qdarkstyle
 from PyQt5.QtWidgets import *
+from PyQt5 import QtGui
 from ProjectTab import ProjectWidget
 from UnityTab import UnityWidget
 from PreferenceTab import PreferenceWidget
@@ -47,7 +48,7 @@ class MainWindow(QMainWindow):
         self.setStatusBar(self.status_bar)
         Global.printStatus("Ready", 3000)
 
-        # self.setWindowIcon(QIcon("img/icon.png"))
+        self.setWindowIcon(QtGui.QIcon("img\\icon.png"))
 
         self.setGeometry(0, 0, 700, 600)
         self.put_center()
