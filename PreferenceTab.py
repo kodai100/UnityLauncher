@@ -40,6 +40,8 @@ class PreferenceWidget(QWidget):
         self.init_list()
 
         self.setLayout(vbox)
+
+
         return
 
     def init_list(self):
@@ -50,6 +52,9 @@ class PreferenceWidget(QWidget):
             for data in readData[i]:
                 self.list_holder[i].addItem(data)
 
+        Global.set_unity_parent_path_list(readData[1])
+
+        print(self.list_holder[0].item)
 
     def list_group(self, name):
 
@@ -125,6 +130,9 @@ class PreferenceWidget(QWidget):
         Global.printStatus("Saved.", 3000)
 
         return
+
+    def get_unity_parent_path_list(self):
+        return self.list_holder[1]
 
     def reflesh_signal(self):
         return

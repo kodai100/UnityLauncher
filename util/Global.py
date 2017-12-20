@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import *
 class Global:
 
     status_bar = None
+    unity_parent_path_list = None
 
     @staticmethod
     def setStatusBar(instance):
@@ -22,3 +23,13 @@ class Global:
 
         status_bar.show()
         return
+
+    @staticmethod
+    def set_unity_parent_path_list(list):
+        global unity_parent_path_list
+        unity_parent_path_list = list
+
+    @staticmethod
+    def get_unity_parent_path_list():
+        global unity_parent_path_list
+        return unity_parent_path_list

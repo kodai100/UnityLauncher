@@ -18,8 +18,9 @@ def explorer(path):
         Global.printStatus("Open: {0}".format(path), 5000)
     elif platform.system() == "Windows":
         # Win
-        subprocess.Popen('explorer /select,{path}'.format(path=path))
-        Global.printStatus("Open: {0}".format(path), 5000)
+        refined_path = path.replace('/', '\\')
+        subprocess.Popen('explorer /select,{path}'.format(path=refined_path))
+        Global.printStatus("Open: {0}".format(refined_path), 5000)
     else:
         Global.printStatus("Not supported.", 5000)
 

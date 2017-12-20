@@ -19,9 +19,10 @@ class UnityLauncherWidget(QWidget):
     def init(self):
 
         qtab = QTabWidget()
+        qtab.addTab(PreferenceWidget(parent=self), 'Preferences')   # 一番先
         qtab.addTab(ProjectWidget(parent=self), 'Projects')
         qtab.addTab(UnityWidget(parent=self), 'Unity')
-        qtab.addTab(PreferenceWidget(parent=self), 'Preferences')
+
 
         hbox = QHBoxLayout()
         hbox.addWidget(qtab)
